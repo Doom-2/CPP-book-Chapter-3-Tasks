@@ -6,7 +6,7 @@ int main()
     cout.setf(ios::fixed);
     double val_1, val_2;
     while (1) {
-        cout << "Enter 2 decimals, dividing the input by pressing 'Enter'.\n";
+        cout << "Enter 2 doubles, dividing the input by pressing 'Enter'.\n";
         cin >> val_1 >> val_2;
 
         //Numeric input validation
@@ -29,19 +29,19 @@ int main()
     cout << setprecision(2);
     cout << "The lowest value is " << min(val_1, val_2) << endl;
     cout << "The biggest value is " << max(val_1, val_2) << endl;
-    cout << "The sum of two integers is " << val_1 + val_2 << endl;
-    cout << "The difference of two integers is " << val_1 - val_2 << endl;
-    cout << "The product of two integers is " << val_1 * val_2 << endl;
+    cout << "The sum of two doubles is " << val_1 + val_2 << endl;
+    cout << "The difference of two doubles is " << val_1 - val_2 << endl;
+    cout << "The product of two doubles is " << val_1 * val_2 << endl;
 
     try {
         if (val_2 == 0) {
             throw logic_error("Divide by zero");
         }
         else if (val_1 == 0)
-            cout << "The quotient of two integers is 0" << endl;
+            cout << "The quotient of two doubles is 0" << endl;
         else {
             double quotient = val_1 / val_2;
-            cout << "The quotient of two integers is " << setprecision(2) << quotient << endl;
+            cout << "The quotient of two doubles is " << setprecision(2) << quotient << endl;
         }
     }
     catch (logic_error e) {
